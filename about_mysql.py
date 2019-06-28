@@ -19,7 +19,8 @@ def read_data():
             data.append((line[0],line[1],line[3],line[4],line[5],line[6]))
     return data
 
-def put_in_mydatabase():
+def put_in_mydatabase(data):
+    #data是一个列表，列表中的每个元素是元组
     conn = pymysql.connect(
         host="localhost",
         user="root",password="123456",
@@ -41,7 +42,6 @@ def put_in_mydatabase():
     """
 
     sql='insert into name_type_2(gene_name,gene_type,gene_rs,gene_pos_37,gene_pos_38,gene) values(%s,%s,%s,%s,%s,%s);'
-    data=read_data()
     cursor.executemany(sql, data)
     conn.commit()
     cursor.close()
