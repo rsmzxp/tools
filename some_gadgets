@@ -1,0 +1,16 @@
+def my_step_multi(n):
+	"""
+	n计算n的阶乘
+	"""
+	result=1
+	for i in range(1,n+1):
+		result *= i
+	return result
+
+def my_combination(m,n):
+	'''
+	m,n表示从m个样品中抽取n个
+	'''
+	if m<n:
+		return False
+	return my_step_multi(m)/(my_step_multi(n)*my_step_multi(m-n))
