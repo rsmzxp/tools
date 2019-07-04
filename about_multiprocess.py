@@ -2,7 +2,6 @@ from multiprocessing import Pool
 from functools import partial
 
 def to_bam(name,my_dir):
-	#to_bam.sh是一个shell脚本
 	subprocess.run('to_bam.sh '+name+' '+my_dir, shell=True)
 	
 if __name__=='__main__':
