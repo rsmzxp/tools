@@ -14,3 +14,15 @@ def my_combination(m,n):
 	if m<n:
 		return False
 	return my_step_multi(m)/(my_step_multi(n)*my_step_multi(m-n))
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+import itertools
+
+product 笛卡尔积　　（有放回抽样排列）
+
+permutations 排列　　（不放回抽样排列）
+
+combinations 组合,没有重复　　（不放回抽样组合）
+
+combinations_with_replacement 组合,有重复　　（有放回抽样组合）
