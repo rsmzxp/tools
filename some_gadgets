@@ -26,3 +26,29 @@ permutations 排列　　（不放回抽样排列）
 combinations 组合,没有重复　　（不放回抽样组合）
 
 combinations_with_replacement 组合,有重复　　（有放回抽样组合）
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#判断一个元素是否位于一个数组中
+
+a = [x for x in range(10^10)]
+
+b = 923729
+
+#这种方法是通过遍历的方法进行的，很慢
+if b not in a:
+	print('NO')
+else:
+	print('YES')
+
+#这种方法是通过转变字典，利用hash的方法进行的，相对快一点
+a = dict(zip(a,a))
+if b not in a:
+	print('NO')
+else:
+	print('YES')
+
+
+
