@@ -1,0 +1,7 @@
+import sys
+cur_path='/home/zhangxp/tools/vcf_tool/'
+sys.path.append(cur_path)
+import vcf
+
+file = sys.argv[1]
+vcf_reader = vcf.VCFReader(open(file, 'r'))
